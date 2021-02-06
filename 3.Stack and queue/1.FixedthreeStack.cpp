@@ -6,18 +6,18 @@ class FixedThreeStack
     int numberofStacks = 3;
     int stackCapacity;
     int *values;
-    int sizes[3]={0};
+    int sizes[3] = {0};
 
 public:
     FixedThreeStack(int cap)
     {
         stackCapacity = cap;
-        values = new int[stackCapacity * numberofStacks]();
+        values = new int[stackCapacity * numberofStacks];
     }
 
     bool isFull(int stackNum)
-    {   
-        
+    {
+
         if (stackNum < 3)
             return sizes[stackNum] == stackCapacity;
         else
@@ -49,7 +49,7 @@ public:
         {
             sizes[stackNum]++;
             values[indexOfTop(stackNum)] = val;
-            cout<<"Pushed "<<val<<" in Stack "<<stackNum+1<<endl;
+            cout << "Pushed " << val << " in Stack " << stackNum + 1 << endl;
         }
     }
 
